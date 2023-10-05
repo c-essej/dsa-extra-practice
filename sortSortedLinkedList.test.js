@@ -1,4 +1,4 @@
-const LinkedList = require("./linked-list");
+const {Node, LinkedList} = require("./linked-list");
 const sortSortedLinkedList = require("./sortSortedLinkedList")
 
 describe("sortSortedLinkedList", function() {
@@ -21,9 +21,9 @@ describe("sortSortedLinkedList", function() {
     let newList = sortSortedLinkedList(a, b);
 
     expect(newList.length).toBe(6);
-    expect(newList.head.val).toEqual(1);
-    expect(newList.head.next.val).toEqual(2);
-    expect(newList.tail.val).toEqual(6);
+    expect(newList.head.val.val).toEqual(1);
+    expect(newList.head.next.val.val).toEqual(2);
+    expect(newList.tail.val.val).toEqual(6);
 
 
   });
