@@ -1,4 +1,4 @@
-const {LinkedList, Node } = require("./sortSortedLinkedList");
+const LinkedList = require("./linked-list");
 const sortSortedLinkedList = require("./sortSortedLinkedList")
 
 describe("sortSortedLinkedList", function() {

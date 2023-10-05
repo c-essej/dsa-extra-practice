@@ -1,5 +1,7 @@
 "use strict";
 
+const LinkedList = require("./linked-list");
+
 /** Node: node for a singly linked list. */
 
 class Node {
@@ -22,6 +24,15 @@ class LinkedList {
     for (let val of vals) {
       this.push(val);
     }
+  }
+
+  push(val) {
+    let newNode = new Node(val);
+
+    if (this.head === null) this.head = newNode;
+    if (this.tail !== null) this.tail.next = newNode;
+    this.tail = newNode;
+    this.length++;
   }
 }
 
@@ -54,4 +65,5 @@ return newLinkedList;
 
 
 
-module.exports = { LinkedList, Node, sortSortedLinkedList};
+// module.exports = { LinkedList, Node, sortSortedLinkedList};
+module.exports = sortSortedLinkedList;
